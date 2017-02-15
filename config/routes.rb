@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-	root 'books#index'
+  devise_for :users
+	root "pages#show", page: "home"
   resources :books do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	  member do
